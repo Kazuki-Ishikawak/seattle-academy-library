@@ -58,12 +58,12 @@ public class AccountController {
 				usersService.registUser(userInfo);
 				return "redirect:/login";
 			} else {
-				model.addAttribute("errowMessage", "パスワードが一致しません");
+				model.addAttribute("errorMessage", "パスワードが一致しません");
 				return "createAccount";
 			}
 
 		} else {
-			model.addAttribute("errowMessage", "パスワードは8文字以上かつ半角英数字に設定してください");
+			model.addAttribute("errorMessage", "パスワードは8文字以上かつ半角英数字に設定してください");
 			return "createAccount";
 		}
 	}
