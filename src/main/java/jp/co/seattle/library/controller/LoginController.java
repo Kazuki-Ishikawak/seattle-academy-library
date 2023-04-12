@@ -42,10 +42,11 @@ public class LoginController {
 		UserInfo selectedUserInfo = usersService.selectUserInfo(email, password);
 
 		// ユーザーが存在すればログイン、存在しなければエラー(タスク２)
-		if(selectedInfo != null) {
+		if(selectedUserInfo != null) {
 			return "redirect:/home";
 		}else {
-			
+			model.addAttribute("errorMessage", "パスワードは8文字以上かつ半角英数字に設定してください");
+			return "login";
 		}
 		
 		
