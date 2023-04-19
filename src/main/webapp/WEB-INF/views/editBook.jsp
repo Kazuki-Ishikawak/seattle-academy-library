@@ -69,17 +69,18 @@
                     </div>
                     <div>
                         <span>説明文</span><span class="care care1">任意</span>
-                    </div>
+                    </div
                     <input type="hidden" id="bookId" name="bookId" value="${bookInfo.bookId}">
                 </div>
             </div>
             <div class="bookBtn_box">
-                <button type="submit" id="add-btn" class="btn_updateBook">更新</button>    
+                <button type="submit" id="add-btn" class="btn_updateBook">更新</button>
         </form>
-        		<form method="post" action="deleteBook" name="delete">
-
- 				</form>
- 			</div>      
+        <form method="post" action="deleteBook" name="delete">
+            <input type="hidden" id="bookId" name="bookId" value="${bookInfo.bookId}">
+            <button type="submit" id="delete-btn" class="btn_deleteBook">削除</button>
+        </form>
+        </div>
     </main>
 </body>
 </html>
