@@ -33,7 +33,16 @@
             <h1>書籍の編集</h1>
             <div class="content_body add_book_content">
                 <div>
-                    <span>書籍の画像</span> <span class="care care1">任意</span> <input type="file" accept="image/*" name=thumbnail id="thumbnail">
+                    <span>書籍の画像</span> <span class="care care1">任意</span>
+                    <div class="book_thumnail">
+                        <c:if test="${empty bookInfo.thumbnailUrl}">
+                            <img class="book_noimg" src="resources/img/noImg.png">
+                        </c:if>
+                        <c:if test="${!empty bookInfo.thumbnailUrl}">
+                            <img class="book_noimg" src="${bookInfo.thumbnailUrl}">
+                        </c:if>
+                    </div>
+                    <input type="file" accept="image/*" name=thumbnail id="thumbnail">
                 </div>
                 <div class="content_right">
                     <div>
